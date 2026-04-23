@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="banner">
+    <div class="banner-content">
+      <div class="pokeball-icon"></div>
+      <h1>Pokédex</h1>
+      <p>Explore o mundo dos Pokémons</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="search-group">
+        <input type="text" id="search-input" placeholder="Nome ou ID (ex: pikachu, 25)" />
+        <button id="search-btn">Buscar</button>
+        <button id="clear-btn">Limpar</button>
+      </div>
+      <div class="filter-group">
+        <label for="type-filter">Filtrar por tipo:</label>
+        <select id="type-filter">
+          <option value="all">Todos</option>
+        </select>
+      </div>
+    </section>
+
+    <div id="status-msg" class="status-msg"></div>
+
+    <section id="pokemon-grid" class="pokemon-grid"></section>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Carregando...</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

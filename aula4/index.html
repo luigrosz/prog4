@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caça ao Yami</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="trail-container"></div>
+
+  <div id="ui">
+    <h1 class="title">⚔️ Caça ao Yami ⚔️</h1>
+    <div id="stats">
+      <div class="stat-box">
+        <span class="stat-label">PONTOS</span>
+        <span id="score">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">TEMPO</span>
+        <span id="timer">15</span>
+      </div>
+    </div>
+    <button id="start-btn" onclick="startGame()">INICIAR JOGO</button>
+  </div>
+
+  <div id="game-area"></div>
+
+  <div id="overlay" class="hidden">
+    <div id="result-box">
+      <h2>FIM DE JOGO</h2>
+      <p>Pontuação final:</p>
+      <span id="final-score">0</span>
+      <button onclick="resetGame()">JOGAR NOVAMENTE</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
