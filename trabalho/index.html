@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daria Wiki — A Enciclopédia Não-Oficial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ======================== HEADER ======================== -->
+  <header>
+    <div class="header-top">
+      <div class="site-title">
+        <div class="logo-icon">D</div>
+        <div>
+          <h1>Daria <span class="title-accent">Wiki</span></h1>
+          <p class="header-subtitle">A enciclopédia da série dos anos 90</p>
+        </div>
+      </div>
+      <button id="theme-toggle">🌙 Modo Escuro</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#personagens">Personagens</a></li>
+        <li><a href="#temporadas">Temporadas</a></li>
+        <li><a href="#legado">Legado</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+        <li><a href="#frases">Frases</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======================== MAIN ======================== -->
+  <div class="container">
+    <div class="wiki-layout">
+
+      <main>
+
+        <!-- Índice de Conteúdo -->
+        <div class="toc" id="toc">
+          <h3>Conteúdo</h3>
+          <ol>
+            <li><a href="#sobre">Sobre a Série</a></li>
+            <li><a href="#personagens">Personagens</a></li>
+            <li><a href="#temporadas">Temporadas e Episódios</a></li>
+            <li><a href="#legado">Legado Cultural</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#frases">Gerador de Frases</a></li>
+          </ol>
+        </div>
+
+        <!-- ---- SEÇÃO: SOBRE ---- -->
+        <section id="sobre">
+          <div class="section-header">
+            <h2>Sobre a Série</h2>
+          </div>
+
+          <article class="main-article">
+            <p>
+              <strong>Daria</strong> é uma série de animação americana criada por
+              <strong>Glenn Eichler</strong> e <strong>Susie Lewis Lynn</strong>,
+              exibida originalmente pelo canal <a href="https://www.mtv.com" target="_blank">MTV</a>
+              de <span class="tag">1997</span> a <span class="tag">2002</span>.
+              Conhecida por seu humor sarcástico e crítica social afiada, tornou-se
+              um marco cultural da geração dos anos 90.
+            </p>
+
+            <p>
+              A protagonista, <strong>Daria Morgendorffer</strong>, é uma adolescente
+              inteligente e cínica que se muda com a família para a fictícia cidade de
+              <em>Lawndale</em>. Lá ela precisa navegar pelo universo superficial do
+              ensino médio americano acompanhada de sua única amiga verdadeira, a artista
+              <strong>Jane Lane</strong>.
+            </p>
+
+            <div class="quote-block">
+              "Não é que eu não goste de pessoas. É que me sinto melhor quando não há nenhuma por perto."
+              <cite>— Daria Morgendorffer</cite>
+            </div>
+
+            <h3>Origem da Série</h3>
+            <p>
+              Daria surgiu como personagem secundária em
+              <a href="https://en.wikipedia.org/wiki/Beavis_and_Butt-Head" target="_blank">Beavis and Butt-Head</a>
+              (1993), também da MTV. Seu sucesso foi tamanho que ganhou seu próprio
+              <em>spin-off</em>, explorando com profundidade sua personalidade e visão de mundo.
+            </p>
+
+            <h3>Produção</h3>
+            <p>
+              Produzida pela <strong>MTV Animation</strong>, cada episódio tem
+              aproximadamente 22 minutos. O estilo visual é propositalmente simples,
+              reforçando a estética <em>indie</em> e alternativa da série.
+            </p>
+
+            <ul class="wiki-list">
+              <li>Criadores: Glenn Eichler e Susie Lewis Lynn</li>
+              <li>Rede: MTV</li>
+              <li>Produtora: MTV Animation</li>
+              <li>Número de episódios: 65 + 2 filmes especiais</li>
+              <li>País de origem: Estados Unidos</li>
+              <li>Idioma original: Inglês</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- ---- SEÇÃO: PERSONAGENS ---- -->
+        <section id="personagens">
+          <div class="section-header">
+            <h2>Personagens</h2>
+          </div>
+
+          <p>Clique em um personagem para ver mais detalhes.</p>
+
+          <div class="characters-grid">
+
+            <article class="char-card" onclick="toggleChar(this)">
+              <div class="char-avatar-wrap">
+                <img src="img/daria.webp" alt="Daria Morgendorffer" class="char-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="char-avatar-fallback" style="background:#4a5240;">🤓</div>
+              </div>
+              <h3>Daria Morgendorffer</h3>
+              <div class="char-role">Protagonista</div>
+              <div class="char-detail">
+                Adolescente intelectual e sarcástica. Adora literatura e despreza
+                superficialidade. Usa óculos redondos e jaqueta verde-oliva.
+                Sua voz é a mais honesta de Lawndale.
+              </div>
+            </article>
+
+            <article class="char-card" onclick="toggleChar(this)">
+              <div class="char-avatar-wrap">
+                <img src="img/jane.webp" alt="Jane Lane" class="char-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="char-avatar-fallback" style="background:#8a3a3a;">🎨</div>
+              </div>
+              <h3>Jane Lane</h3>
+              <div class="char-role">Melhor amiga</div>
+              <div class="char-detail">
+                Artista visual excêntrica e sardônica. Única amiga verdadeira de Daria.
+                Família disfuncional mas criativa. Parceira perfeita no cinismo.
+              </div>
+            </article>
+
+            <article class="char-card" onclick="toggleChar(this)">
+              <div class="char-avatar-wrap">
+                <img src="img/quinn.webp" alt="Quinn Morgendorffer" class="char-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="char-avatar-fallback" style="background:#c4611f;">👑</div>
+              </div>
+              <h3>Quinn Morgendorffer</h3>
+              <div class="char-role">Irmã de Daria</div>
+              <div class="char-detail">
+                Irmã popular e obcecada com moda. Oposto total de Daria.
+                Nega ter parentesco com ela nas primeiras temporadas.
+                Evolui bastante ao longo da série.
+              </div>
+            </article>
+
+            <article class="char-card" onclick="toggleChar(this)">
+              <div class="char-avatar-wrap">
+                <img src="img/trent.webp" alt="Trent Lane" class="char-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="char-avatar-fallback" style="background:#6a4a8a;">🎸</div>
+              </div>
+              <h3>Trent Lane</h3>
+              <div class="char-role">Irmão de Jane</div>
+              <div class="char-detail">
+                Músico da banda <em>Mystik Spiral</em>. Preguiçoso e sonhador.
+                Interesse amoroso de Daria nas primeiras temporadas.
+              </div>
+            </article>
+
+            <article class="char-card" onclick="toggleChar(this)">
+              <div class="char-avatar-wrap">
+                <img src="img/helen.webp" alt="Helen Morgendorffer" class="char-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="char-avatar-fallback" style="background:#3a6a8a;">💼</div>
+              </div>
+              <h3>Helen Morgendorffer</h3>
+              <div class="char-role">Mãe de Daria</div>
+              <div class="char-detail">
+                Advogada ambiciosa e workaholic. Prioriza a carreira mas tenta ser uma boa mãe,
+                nem sempre com sucesso. Exigente, competitiva e frequentemente distraída pelo celular.
+              </div>
+            </article>
+
+            <article class="char-card" onclick="toggleChar(this)">
+              <div class="char-avatar-wrap">
+                <img src="img/jake.webp" alt="Jake Morgendorffer" class="char-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="char-avatar-fallback" style="background:#5a8a6a;">😰</div>
+              </div>
+              <h3>Jake Morgendorffer</h3>
+              <div class="char-role">Pai de Daria</div>
+              <div class="char-detail">
+                Consultor de marketing ansioso e ingênuo. Carrega traumas do pai severo e
+                explode em crises existenciais sem aviso. Afetivo mas completamente perdido
+                como figura paterna.
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ---- SEÇÃO: TEMPORADAS ---- -->
+        <section id="temporadas">
+          <div class="section-header">
+            <h2>Temporadas e Episódios</h2>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Temporada</th>
+                <th>Ano</th>
+                <th>Episódios</th>
+                <th>Destaque</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1ª Temporada</strong></td>
+                <td>1997</td>
+                <td>13</td>
+                <td>Daria chega a Lawndale e conhece Jane</td>
+              </tr>
+              <tr>
+                <td><strong>2ª Temporada</strong></td>
+                <td>1998</td>
+                <td>13</td>
+                <td>Aprofundamento das amizades e rivalidades</td>
+              </tr>
+              <tr>
+                <td><strong>3ª Temporada</strong></td>
+                <td>1999</td>
+                <td>13</td>
+                <td>Jane namora; Daria conhece Tom Sloane</td>
+              </tr>
+              <tr>
+                <td><strong>4ª Temporada</strong></td>
+                <td>2000</td>
+                <td>13</td>
+                <td>Daria e Tom namoram; tensão com Jane</td>
+              </tr>
+              <tr>
+                <td><strong>5ª Temporada</strong></td>
+                <td>2001</td>
+                <td>13</td>
+                <td>Preparação para faculdade; término com Tom</td>
+              </tr>
+              <tr>
+                <td><strong>Is It Fall Yet?</strong></td>
+                <td>2000</td>
+                <td>Especial</td>
+                <td>Verão antes do último ano do colégio</td>
+              </tr>
+              <tr>
+                <td><strong>Is It College Yet?</strong></td>
+                <td>2002</td>
+                <td>Especial</td>
+                <td>Fim do colégio; encerramento da série</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Episódios Mais Marcantes</h3>
+          <ol class="wiki-list">
+            <li><em>Esteemsters</em> (S01E01) — Episódio piloto; Daria chega a Lawndale</li>
+            <li><em>The Misery Chick</em> (S01E13) — Reflexão sobre popularidade e tristeza</li>
+            <li><em>Lane Miserables</em> (S03E09) — A família disfuncional de Jane em destaque</li>
+            <li><em>See Jane Run</em> (S02E07) — Jane no time de corrida gera tensão com Daria</li>
+            <li><em>Prize Fighters</em> (S05E03) — Dilemas sobre bolsas de estudo e integridade</li>
+            <li><em>My Night at Daria's</em> (S05E12) — Episódio mais polêmico da série</li>
+          </ol>
+        </section>
+
+        <!-- ---- SEÇÃO: LEGADO ---- -->
+        <section id="legado">
+          <div class="section-header">
+            <h2>Legado Cultural</h2>
+          </div>
+
+          <article>
+            <p>
+              Daria deixou uma marca profunda na cultura pop americana e mundial.
+              A série foi pioneira em retratar uma personagem feminina intelectual,
+              sarcástica e anti-conformista como protagonista <em>positiva</em> em
+              uma animação voltada para o público jovem.
+            </p>
+
+            <h3>Impacto na Representação</h3>
+            <p>
+              Ao contrário de outras séries da época, Daria não precisava ser popular
+              ou socialmente adaptada para ser a heroína. Isso ressoou com toda uma
+              geração de adolescentes que se sentiam deslocados.
+            </p>
+
+            <h3>Influências e Herdeiros</h3>
+            <ul class="wiki-list">
+              <li>Influenciou séries como <em>Bojack Horseman</em> e <em>Big Mouth</em></li>
+              <li>Gerou ampla cultura de <em>fan art</em> e <em>fan fiction</em></li>
+              <li>Considerada ícone do feminismo pop dos anos 90</li>
+              <li>Listada entre as melhores animações pela <em>Rolling Stone</em> e <em>Time</em></li>
+              <li>Disponível para streaming na Paramount+</li>
+              <li>Em 2021 a MTV encomendou o reboot <strong>Jodie</strong></li>
+            </ul>
+
+            <div class="quote-block">
+              "Daria foi a série que provou que cartoons podiam ser inteligentes,
+              irônicos e politicamente relevantes sem precisar gritar."
+              <cite>— Rolling Stone, 2002</cite>
+            </div>
+          </article>
+        </section>
+
+        <!-- ---- SEÇÃO: CURIOSIDADES ---- -->
+        <section id="curiosidades">
+          <div class="section-header">
+            <h2>Curiosidades</h2>
+          </div>
+
+          <ul class="wiki-list">
+            <li>Daria é um <em>spin-off</em> de <strong>Beavis and Butt-Head</strong> (1993–1997)</li>
+            <li>O sobrenome "Morgendorffer" é propositalmente incomum</li>
+            <li>A cidade <strong>Lawndale</strong> representa qualquer subúrbio americano genérico</li>
+            <li>A voz de Daria foi feita por <strong>Tracy Grandstaff</strong>, sem experiência anterior</li>
+            <li>A série no streaming não tem trilha sonora original por direitos autorais</li>
+            <li>A banda fictícia <strong>Mystik Spiral</strong> inspirou músicas reais de fãs</li>
+            <li>A expressão inexpressiva de Daria virou símbolo de <em>deadpan humor</em> nos memes</li>
+            <li>Quinn chama Daria de "primo distante" para esconder o parentesco durante toda a série</li>
+          </ul>
+
+          <h3>Gêneros e Temas</h3>
+          <div id="tags-container">
+            <span class="tag">Animação</span>
+            <span class="tag">Comédia</span>
+            <span class="tag accent">Anos 90</span>
+            <span class="tag">Sátira Social</span>
+            <span class="tag">Feminismo</span>
+            <span class="tag accent">Cult Classic</span>
+            <span class="tag">MTV</span>
+            <span class="tag">Ensino Médio</span>
+          </div>
+
+          <button id="add-tag-btn" class="btn-secondary">+ Adicionar Tag Aleatória</button>
+        </section>
+
+        <!-- ---- SEÇÃO: FRASES ---- -->
+        <section id="frases">
+          <div class="section-header">
+            <h2>Gerador de Frases</h2>
+          </div>
+
+          <p>Clique no botão para uma frase aleatória de Daria.</p>
+
+          <div id="quote-section">
+            <div id="quote-display">"Aperte o botão. Ou não. Tanto faz."</div>
+            <button id="quote-btn">Nova Frase de Daria</button>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ======================== ASIDE / INFOBOX ======================== -->
+      <aside>
+        <div class="infobox" id="infobox">
+          <h3 class="infobox-title">Daria (Série)</h3>
+
+          <div class="infobox-img-wrap">
+            <img src="img/poster.webp" alt="Pôster oficial de Daria" class="infobox-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="infobox-img-fallback">📺</div>
+          </div>
+
+          <table class="infobox-table">
+            <tr>
+              <td>Formato</td>
+              <td>Animação / Comédia</td>
+            </tr>
+            <tr>
+              <td>Criado por</td>
+              <td>Glenn Eichler &amp; Susie Lewis Lynn</td>
+            </tr>
+            <tr>
+              <td>Rede</td>
+              <td>MTV</td>
+            </tr>
+            <tr>
+              <td>Estreia</td>
+              <td>3 de março de 1997</td>
+            </tr>
+            <tr>
+              <td>Encerramento</td>
+              <td>25 de janeiro de 2002</td>
+            </tr>
+            <tr>
+              <td>Temporadas</td>
+              <td>5 + 2 filmes</td>
+            </tr>
+            <tr>
+              <td>Episódios</td>
+              <td>65</td>
+            </tr>
+            <tr>
+              <td>País</td>
+              <td>Estados Unidos</td>
+            </tr>
+            <tr>
+              <td>Idioma</td>
+              <td>Inglês</td>
+            </tr>
+            <tr>
+              <td>Spin-off de</td>
+              <td>Beavis and Butt-Head</td>
+            </tr>
+          </table>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer>
+    <p><strong>Daria Wiki</strong></p>
+    <p class="footer-quote">
+      "É uma bagunça lá fora. Mas aqui dentro, no mundo das ideias, tudo faz sentido."
+      <em>— Daria</em>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
