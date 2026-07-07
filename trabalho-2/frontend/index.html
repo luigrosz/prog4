@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daria Wiki — A Enciclopédia Não-Oficial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ======================== LOGIN OVERLAY ======================== -->
+  <div id="login-overlay">
+    <div class="login-box">
+      <div class="login-header">
+        <div class="logo-icon">D</div>
+        <h2>Daria Wiki</h2>
+      </div>
+      <p class="login-sub">Faça login para acessar a enciclopédia</p>
+      <form id="login-form">
+        <input type="text" id="login-username" placeholder="Usuário" required>
+        <input type="password" id="login-password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        <p id="login-error" class="login-error"></p>
+      </form>
+      <p class="login-hint">Padrão: admin / admin123</p>
+    </div>
+  </div>
+
+  <!-- ======================== HEADER ======================== -->
+  <header>
+    <div class="header-top">
+      <div class="site-title">
+        <div class="logo-icon">D</div>
+        <div>
+          <h1>Daria <span class="title-accent">Wiki</span></h1>
+          <p class="header-subtitle">A enciclopédia da série dos anos 90</p>
+        </div>
+      </div>
+      <button id="theme-toggle">🌙 Modo Escuro</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#personagens">Personagens</a></li>
+        <li><a href="#temporadas">Temporadas</a></li>
+        <li><a href="#legado">Legado</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+        <li><a href="#frases">Frases</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======================== MAIN ======================== -->
+  <div class="container">
+    <div class="wiki-layout">
+
+      <main>
+
+        <!-- Índice de Conteúdo -->
+        <div class="toc" id="toc">
+          <h3>Conteúdo</h3>
+          <ol>
+            <li><a href="#sobre">Sobre a Série</a></li>
+            <li><a href="#personagens">Personagens</a></li>
+            <li><a href="#temporadas">Temporadas e Episódios</a></li>
+            <li><a href="#legado">Legado Cultural</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#frases">Gerador de Frases</a></li>
+          </ol>
+        </div>
+
+        <!-- ---- SEÇÃO: SOBRE ---- -->
+        <section id="sobre">
+          <div class="section-header">
+            <h2>Sobre a Série</h2>
+          </div>
+          <article class="main-article" id="sobre-content">
+            <p>Carregando...</p>
+          </article>
+        </section>
+
+        <!-- ---- SEÇÃO: PERSONAGENS ---- -->
+        <section id="personagens">
+          <div class="section-header">
+            <h2>Personagens</h2>
+          </div>
+          <p>Clique em um personagem para ver mais detalhes.</p>
+          <div class="characters-grid" id="characters-grid">
+            <p>Carregando personagens...</p>
+          </div>
+        </section>
+
+        <!-- ---- SEÇÃO: TEMPORADAS ---- -->
+        <section id="temporadas">
+          <div class="section-header">
+            <h2>Temporadas e Episódios</h2>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Temporada</th>
+                <th>Ano</th>
+                <th>Episódios</th>
+                <th>Destaque</th>
+              </tr>
+            </thead>
+            <tbody id="seasons-tbody">
+              <tr>
+                <td colspan="4">Carregando...</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Episódios Mais Marcantes</h3>
+          <ol class="wiki-list" id="episodes-list">
+            <li>Carregando...</li>
+          </ol>
+        </section>
+
+        <!-- ---- SEÇÃO: LEGADO ---- -->
+        <section id="legado">
+          <div class="section-header">
+            <h2>Legado Cultural</h2>
+          </div>
+          <article id="legado-content">
+            <p>Carregando...</p>
+          </article>
+        </section>
+
+        <!-- ---- SEÇÃO: CURIOSIDADES ---- -->
+        <section id="curiosidades">
+          <div class="section-header">
+            <h2>Curiosidades</h2>
+          </div>
+          <div id="curiosidades-content">
+            <p>Carregando...</p>
+          </div>
+          <h3>Gêneros e Temas</h3>
+          <div id="tags-container">
+            <span class="tag">Animação</span>
+            <span class="tag">Comédia</span>
+            <span class="tag accent">Anos 90</span>
+            <span class="tag">Sátira Social</span>
+            <span class="tag">Feminismo</span>
+            <span class="tag accent">Cult Classic</span>
+            <span class="tag">MTV</span>
+            <span class="tag">Ensino Médio</span>
+          </div>
+          <button id="add-tag-btn" class="btn-secondary">+ Adicionar Tag Aleatória</button>
+        </section>
+
+        <!-- ---- SEÇÃO: FRASES ---- -->
+        <section id="frases">
+          <div class="section-header">
+            <h2>Gerador de Frases</h2>
+          </div>
+          <p>Clique no botão para uma frase aleatória de Daria.</p>
+          <div id="quote-section">
+            <div id="quote-display">Carregando frases...</div>
+            <button id="quote-btn">Nova Frase de Daria</button>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ======================== ASIDE / INFOBOX ======================== -->
+      <aside>
+        <div class="infobox" id="infobox">
+          <h3 class="infobox-title">Daria (Série)</h3>
+          <div class="infobox-img-wrap">
+            <img src="img/poster.webp" alt="Pôster oficial de Daria" class="infobox-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="infobox-img-fallback">📺</div>
+          </div>
+          <table class="infobox-table" id="infobox-table">
+            <tr>
+              <td>Carregando...</td>
+            </tr>
+          </table>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer>
+    <p><strong>Daria Wiki</strong></p>
+    <p class="footer-quote">
+      "É uma bagunça lá fora. Mas aqui dentro, no mundo das ideias, tudo faz sentido."
+      <em>— Daria</em>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
